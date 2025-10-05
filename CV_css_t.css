@@ -1,0 +1,297 @@
+/* === BASE === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  transition: background-image 0.5s ease;
+  background-image: url('fond_cv.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  user-select: none;
+}
+
+body.dark-mode {
+  background-image: url('fond_cv_s.png');
+  color: #f0f0f0;
+}
+
+/* === HEADER === */
+.btn-download-cv {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-download-cv:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode .btn-download-cv {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+body.dark-mode .btn-download-cv:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#toggle-theme img {
+  width: 32px;
+  height: 32px;
+}
+
+header {
+  background-image: url("fond_cv_head.png");
+  background-color: #222;
+  color: #1f1e1e;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+body.dark-mode header {
+  background-image: url("fond_cv_head_s.png");
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ffcc00;
+}
+
+/* === HORLOGE === */
+#horloge {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icone-horloge {
+  width: 40px;
+  height: 40px;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #1f1e1e;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section h2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === PROFIL === */
+.profil {
+  display: flex;
+}
+
+/* === LISTES === */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #eee;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* === ARTICLES === */
+article {
+  margin-bottom: 1.5rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid #ffcc00;
+  border-radius: 4px;
+}
+
+/* === PORTFOLIO === */
+.portfolio {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  border-left: 4px solid #ffcc00;
+  border-radius: 4px;
+}
+
+.portfolio h2 {
+  font-size: 1.8rem;
+  color: #1f1e1e;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.portfolio iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* === BOUTON CV === */
+.btn-cv {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn-cv:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* === CONTACT === */
+.contact a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  color: #ffcc00;
+}
+
+/* === DARK MODE === */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f0f0f0;
+}
+
+body.dark-mode ul li,
+body.dark-mode article,
+body.dark-mode .portfolio {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #ffcc00;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body.dark-mode h2,
+body.dark-mode .portfolio h2 {
+  border-bottom: 2px solid #ffcc00;
+}
+
+body.dark-mode .btn-cv {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+body.dark-mode .btn-cv:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body:not(.dark-mode) header h1 {
+  color: #fff;
+}
+
+
+/* === FOOTER === */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+  }
+}
